@@ -1,0 +1,104 @@
+/* .navbar {
+  font-size: 1.1rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.nav-link {
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ffc107; 
+}
+
+.navbar-toggler {
+  border: none;
+} */
+.navbar-color {
+  background-color: rgb(206, 231, 154) !important;
+}
+
+
+
+/* Special styling */
+.navbar-color {
+  background-color: #000; /* dark background or your custom color */
+}
+
+/* Base style for links */
+.nav-link-hover {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Underline effect */
+.nav-link-hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect: color + underline + mini movement */
+.nav-link-hover:hover {
+  color: #dc3545; /* Bootstrap danger color */
+  transform: translateY(-2px);
+}
+
+.nav-link-hover:hover::after {
+  background-color: #dc3545;
+  transform: scaleX(1);
+}
+
+
+/* Center container for search */
+.navbar-search {
+  width: 40%; /* adjust width as needed */
+}
+
+.search-input {
+  transition: all 0.3s ease-in-out;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.5); /* Dark shadow */
+  border: 1px solid #212529; /* Bootstrap dark color */
+}
+
+
+
+/* Search input dark border on focus */
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.5); /* dark glow */
+  border: 1px solid #212529;
+}
+
+/* Dark theme body background */
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Make badge smaller and neater */
+.badge {
+  font-size: 0.7rem;
+  padding: 0.35em 0.6em;
+}
+
