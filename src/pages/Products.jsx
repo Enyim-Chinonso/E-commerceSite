@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import productsData from '../data/products';
 import ProductCard from '../components/ProductCard';
+import { CartContext } from '../context/CartContext';
 
 function Products() {
-  const [cartItems, setCartItems] = useState([]);
+const { addToCart } = useContext(CartContext);
 
-  const handleAddToCart = (product) => {
-    const updatedCart = [...cartItems, product];
-    setCartItems(updatedCart);
-    // Later we'll share this state globally with Context
-    console.log("Cart updated:", updatedCart);
-  };
+
+  
 
   return (
     <div className="container mt-5">
@@ -18,7 +15,7 @@ function Products() {
       <div className="row g-4">
         {productsData.map((product) => (
           <div className="col-sm-6 col-md-4" key={product.id}>
-            <ProductCard product={product} onAddToCart={handleAddToCart} />
+            <ProductCard product={product} onAddToCart={addToCart} />
           </div>
         ))}
       </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -8,6 +8,8 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Navbar from "./components/Navbar";
+import Cart from "./pages/Cart";
+import Checkout from './pages/Checkout';
 
 
 const App = () => {
@@ -23,6 +25,8 @@ const App = () => {
        <Route path="/dashboard" element={<Dashboard />} />
        <Route path="/contact" element={<Contact />} />
        <Route path="/about" element={<About />} />
+       <Route path="/cart" element={<Cart />} />
+       <Route path="/checkout" element={<Checkout />} />
      </Routes>
    </>
 

@@ -1,23 +1,28 @@
+import cloth from "../assets/cloth.jpg";
+import guyCloth from "../assets/guy-cloth.jpg";
+import womanCloth from "../assets/woman-cloth.jpg";
+import elan from "../assets/elan-pixabay.jpg";
+
 const products = [
   {
     id: 1,
-    name: "Golden Vegetable Oil - 1L",
-    price: 1500,
-    image: "/cloth.jpg",
- },
+    name: "Standard Sweater",
+    price: 7500,
+    image: elan,
+ }, 
 
   {
     id: 2,
-    name: "Pure Palm Oil - 5L",
-    price: 6000,
-    image: "/guy-cloth.jpg",
+    name: "Cold weather Hoodie",
+    price: 8000,
+    image: guyCloth,
   },
 
   {
     id: 3,
-    name: "Frymax Oil - 2.5L",
-    price: 3500,
-    image: "/woman-cloth.jpg",
+    name: "Fine girl sweater",
+    price: 6500,
+    image: womanCloth,
   },
 ];
 

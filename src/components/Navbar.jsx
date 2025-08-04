@@ -1,82 +1,15 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom'; 
-// import './Navbar.css';
-
-// function Navbar() {
-//   return (
-//     <nav className="navbar navbar-expand-lg sticky-top navbar-color">
-//       <div className="container">
-//         <Link className="navbar-brand fw-bold" to="/">E-Shop</Link>
-           
-          
-//             {/* Search box */}
-//       <div className="mx-auto navbar-search d-none d-lg-block">
-//       <form className="d-flex" role="search">
-//         <input
-//           className="form-control me-2 search-input"
-//           type="search"
-//           placeholder="Search"
-//           aria-label="Search"
-//         />
-//         <button className="btn btn-outline-dark" type="submit">
-//           Search
-//         </button>
-//       </form>
-//     </div>
-
-//         <button
-//           className="navbar-toggler"
-//           type="button"
-//           data-bs-toggle="collapse"
-//           data-bs-target="#navbarNav"
-//           aria-controls="navbarNav"
-//           aria-expanded="false"
-//           aria-label="Toggle navigation"
-//         >
-//           <span className="navbar-toggler-icon"></span>
-//         </button>
-
-
-
-//         <div className="collapse navbar-collapse" id="navbarNav">
-//           <ul className="navbar-nav ms-auto">
-//             <li className="nav-item">
-//               <Link className="nav-link-hover me-4" to="/">Home</Link>
-//             </li>
-
-//             <li className="nav-item">
-//               <Link className="nav-link-hover me-4" to="/products">Products</Link>
-//             </li>
-
-//             <li className="nav-item">
-//               <Link className="nav-link-hover me-4" to="/contact">Contact</Link>
-//             </li>
-
-//             <li className="nav-item">
-//               <Link className="nav-link-hover" to="/about">About</Link>
-//             </li>
-//           </ul>
-
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// }
-
-// export default Navbar;
-
-
-
-
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { CartContext } from '../context/CartContext';
 
 function Navbar() {
-  const [cartCount, setCartCount] = useState(3); // Dummy item count
+  // const [cartCount, setCartCount] = useState(3); // Dummy item count
   const [darkMode, setDarkMode] = useState(false); // Toggle state
+  const { cartItems } = useContext(CartContext);
+
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
@@ -141,7 +74,7 @@ function Navbar() {
               <Link to="/cart" className="nav-link text-dark">
                 <FontAwesomeIcon icon={faShoppingCart} />
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  {cartCount}
+                  {cartItems.length}
                 </span>
               </Link>
             </li>
