@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollSection from '../components/ScrollSection';
 import './Home.css';
 import videoBg from '../assets/bg-video.mp4';
 import bgImage from '../assets/bg-image.jpg';
@@ -34,6 +35,13 @@ function Home() {
           Let's Talk
         </a>
       </div>
+
+      <div className="scroll-sections">
+        <ScrollSection />
+        <ScrollSection />
+      </div>
+
+
     </div>
   );
 }

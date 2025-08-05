@@ -70,3 +70,14 @@
   position: relative;
   z-index: 2;
 }
+
+
+
+/* Scroll section styling */
+.scroll-sections {
+  position: relative;
+  z-index: 1;
+  margin-top: 100vh; /* ensures scroll sections begin after full-screen hero */
+  padding: 4rem 0;
+  background-color: #fff; /* or any subtle background to contrast hero */
+}
