@@ -69,6 +69,10 @@ function Navbar() {
               <Link className="nav-link-hover me-4" to="/about">About</Link>
             </li>
 
+            <li className="nav-item">
+              <Link className="nav-link-hover me-4" to="/login">Login</Link>
+            </li>
+
             {/* Cart Icon */}
             <li className="nav-item me-3 position-relative">
               <Link to="/cart" className="nav-link text-dark">
