@@ -139,18 +139,7 @@ function Login() {
           </span>
         </div>
 
-        {/* Optional: Confirm password (if needed in a Register form, not here) */}
-        {/* 
-        <div className="mb-3">
-          <label>Confirm password:</label>
-          <input
-            type={showPassword ? "text" : "password"}
-            className="form-control"
-            placeholder="Confirm Password"
-          />
-        </div> 
-        */}
-
+        
         <button type="submit" className="btn btn-primary w-100">
           Login
         </button>

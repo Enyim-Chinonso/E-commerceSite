@@ -16,7 +16,10 @@ import Cart from "./pages/Cart";
 import Checkout from './pages/Checkout';
 import ScrollSection from './components/ScrollSection';
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import "animate.css";
 
+// For image section
 const App = () => {
   useEffect(() => {
     AOS.init({
@@ -30,6 +33,7 @@ const App = () => {
 
   return (
     <>
+      <ScrollToTop />
       <Navbar />
 
       <Routes>
@@ -43,7 +47,6 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
-      <ScrollSection />
       <Footer />
 
     </>

@@ -34,13 +34,13 @@
 }
 
  .home-content h1 {
-  font-size: 3.5rem; /* Adjust as needed */
-  font-weight: 500;  /* Bold weight */
+  font-size: 3.5rem; 
+  font-weight: 500;  
  }
 
 .home-content p {
-  font-size: 1.5rem; /* Adjust as needed */
-  font-weight: 500;  /* Medium-bold */
+  font-size: 1.5rem; 
+  font-weight: 500;  
 } 
 
 /* For dark background  */
@@ -72,12 +72,10 @@
 }
 
 
-
-/* Scroll section styling */
 .scroll-sections {
   position: relative;
-  z-index: 1;
-  margin-top: 100vh; /* ensures scroll sections begin after full-screen hero */
+  z-index: 2;
+  background-color: #f0f0f0;
   padding: 4rem 0;
-  background-color: #fff; /* or any subtle background to contrast hero */
+  margin-top: 5px; 
 }

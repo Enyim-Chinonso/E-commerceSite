@@ -38,7 +38,7 @@ function Contact() {
     <div className="container mt-5">
       <h2 className="text-center mb-4">Contact Us</h2>
       <p className="text-center mb-4">
-        We wish to hear from you! Fill in the form below and we'll get back to you shortly.
+        We wish to hear from you! Please, fill in the form below and we'll get back to you shortly.
       </p>
 
       <div className="row justify-content-center">
@@ -67,7 +67,7 @@ function Contact() {
             </div>
 
             <div className="text-center">
-              <button type="submit" className="btn btn-danger">Send Message</button>
+              <button type="submit" className="btn btn-primary">Send Message</button>
             </div>
           </form> <br />
 
