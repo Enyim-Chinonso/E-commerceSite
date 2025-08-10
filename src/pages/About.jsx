@@ -8,7 +8,7 @@ function About() {
       <h1>About Us</h1>
       <p className="lead">
         Welcome to E-Shop! <br /> We’re dedicated to providing high-quality products at affordable and convenient prices.
-        Our mission is to make shopping simple, transparent, seamless and satisfying for everyone.
+        Our mission is to make shopping simple, transparent, seamless and satisfying for everyone. <br/> <br/> With this website of ours, you can make purchases online and get your goods delivered to your door step in any location accross the globe. <br/> Start buying from us now!
       </p>
       <img 
           src={picture} 

@@ -1,64 +1,45 @@
-import React, { useState, useEffect, useContext } from 'react';
-import productsData from '../data/products';
-import ProductCard from '../components/ProductCard';
-import { CartContext } from '../context/CartContext';
+import React, { useState, useEffect, useContext } from "react";
+import productsData from "../data/products";
+import ProductCard from "../components/ProductCard";
+import { CartContext } from "../context/CartContext";
 
 function Products() {
-const { addToCart } = useContext(CartContext);
-const [loading, setLoading] = useState(true);
+  const { addToCart } = useContext(CartContext);
+  const [loading, setLoading] = useState(true);
 
-// Spinner loader
- useEffect(() => {
+  // Spinner loader
+  useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1500);
-
-
-       return () => clearTimeout(timer); 
+    return () => clearTimeout(timer);
   }, []);
 
-
-
   if (loading) {
-  return (
-    <div
-      className="d-flex flex-column justify-content-center align-items-center"
-      style={{ minHeight: "60vh" }}
-    >
-      {/* 🔵 Bootstrap Spinner */}
+    return (
       <div
-        className="spinner-border text-danger mb-3"
-        style={{ width: "4rem", height: "4rem" }}
-        role="status"
+        className="d-flex flex-column justify-content-center align-items-center"
+        style={{ minHeight: "60vh" }}
       >
-        <span className="visually-hidden">Loading...</span>
+        {/* 🔵 Bootstrap Spinner */}
+        <div
+          className="spinner-border text-danger mb-3"
+          style={{ width: "4rem", height: "4rem" }}
+          role="status"
+        >
+          <span className="visually-hidden">Loading...</span>
+        </div>
+
+        {/* 🛒 Brand Name with Animation */}
+        <h4 className="fw-bold text-danger animate__animated animate__pulse animate__infinite">
+          E-Shop
+        </h4>
+
+        {/* Optional message */}
+        <p className="text-muted mt-2">Loading products, please wait...</p>
       </div>
-
-      {/* 🛒 Brand Name with Animation */}
-      <h4 className="fw-bold text-danger animate__animated animate__pulse animate__infinite">
-        E-Shop
-      </h4>
-
-      {/* Optional message */}
-      <p className="text-muted mt-2">Loading products, please wait...</p>
-    </div>
-  );
-}
-
-  // if (loading) {
-  //   return (
-  //     <div className="d-flex flex-column justify-content-center align-items-center" style={{ minHeight: '50vh' }}>
-  //       <div className="spinner-border text-primary" style={{ width: "4rem", height: "4rem" }} role="status">
-  //         <span className="visually-hidden">Loading...</span>
-  //       </div>
-  //         {/* <p className="mt-3 fs-5 text-muted">Loading Products... Please wait 🛒</p> */}
-
-  //         <img src="/logo.png" alt="Logo" style={{ width: "60px", marginBottom: "1rem" }} />
-
-  //     </div>
-  //   );
-  // }
-  
+    );
+  }
 
   return (
     <div className="container mt-5">

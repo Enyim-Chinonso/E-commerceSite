@@ -1,4 +1,4 @@
-import cloth from "../assets/cloth.jpg";
+// import cloth from "../assets/cloth.jpg";
 import guyCloth from "../assets/guy-cloth.jpg";
 import womanCloth from "../assets/woman-cloth.jpg";
 import elan from "../assets/elan-pixabay.jpg";

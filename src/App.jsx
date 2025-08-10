@@ -14,7 +14,7 @@ import About from "./pages/About";
 import Navbar from "./components/Navbar";
 import Cart from "./pages/Cart";
 import Checkout from './pages/Checkout';
-import ScrollSection from './components/ScrollSection';
+// import ScrollSection from './components/ScrollSection';
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import "animate.css";
